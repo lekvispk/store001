@@ -19,7 +19,7 @@ import pe.com.ecampos.storemongodb.dto.ProductDTO;
 import pe.com.ecampos.storemongodb.model.Product;
 import pe.com.ecampos.storemongodb.service.ProductService;
 
-@CrossOrigin("https://vast-gorge-47704.herokuapp.com")
+@CrossOrigin//("https://vast-gorge-47704.herokuapp.com")
 @RestController
 @RequestMapping("/products")
 public class ProductsRestController {

@@ -19,7 +19,7 @@ import pe.com.ecampos.storemongodb.dto.OrderDTO;
 import pe.com.ecampos.storemongodb.model.Order;
 import pe.com.ecampos.storemongodb.service.OrderService;
 
-@CrossOrigin("https://vast-gorge-47704.herokuapp.com")
+@CrossOrigin//("https://vast-gorge-47704.herokuapp.com")
 @RestController
 @RequestMapping("/orders")
 public class OrdersRestController {
@@ -27,7 +27,7 @@ public class OrdersRestController {
 	@Autowired
 	private OrderService orderService;
 	
-	@GetMapping(value = "/")
+	@GetMapping(value = "")
 	public List<OrderDTO> getAll() {
 		
 		List<Order> lista = orderService.findAll(); 
@@ -51,7 +51,7 @@ public class OrdersRestController {
 		return ResponseEntity.accepted().body(pres);
 	}
 	
-	@PostMapping("/")
+	@PostMapping("")
 	public ResponseEntity<OrderDTO> saveProducto( @RequestBody Order order ) { 
 		orderService.update( order ); 
 		return ResponseEntity.accepted().body( new OrderDTO() );
