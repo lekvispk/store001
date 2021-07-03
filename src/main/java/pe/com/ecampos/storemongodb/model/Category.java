@@ -1,11 +1,17 @@
 package pe.com.ecampos.storemongodb.model;
 
+import java.io.Serializable;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "category")
-public class Category {
+public class Category implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	public String id;
 	public String name;
