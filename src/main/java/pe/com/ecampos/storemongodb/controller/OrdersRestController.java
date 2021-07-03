@@ -19,7 +19,7 @@ import pe.com.ecampos.storemongodb.dto.OrderDTO;
 import pe.com.ecampos.storemongodb.model.Order;
 import pe.com.ecampos.storemongodb.service.OrderService;
 
-@CrossOrigin
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/orders")
 public class OrdersRestController {
