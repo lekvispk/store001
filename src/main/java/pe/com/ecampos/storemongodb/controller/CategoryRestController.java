@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import pe.com.ecampos.storemongodb.dto.CategoryDTO;
 import pe.com.ecampos.storemongodb.model.Category;
 import pe.com.ecampos.storemongodb.service.CategoryService;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/categories")
 public class CategoryRestController {
