@@ -13,7 +13,7 @@ import pe.com.ecampos.storemongodb.dto.CategoryDTO;
 import pe.com.ecampos.storemongodb.model.Category;
 import pe.com.ecampos.storemongodb.service.CategoryService;
 
-@CrossOrigin("*")
+@CrossOrigin("https://vast-gorge-47704.herokuapp.com")
 @RestController
 @RequestMapping("/categories")
 public class CategoryRestController {
