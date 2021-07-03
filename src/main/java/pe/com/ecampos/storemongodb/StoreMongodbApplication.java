@@ -8,8 +8,6 @@ import org.springframework.core.Ordered;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class StoreMongodbApplication {
@@ -17,7 +15,7 @@ public class StoreMongodbApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(StoreMongodbApplication.class, args);
 	}
-	
+	/*
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
@@ -28,14 +26,14 @@ public class StoreMongodbApplication {
 				registry.addMapping("/**").allowedOrigins("*");
 			}
 		};
-	}
+	}*/
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public FilterRegistrationBean corsFilter() {
 	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 	    CorsConfiguration config = new CorsConfiguration();
-	    config.setAllowCredentials(true);
+	    //config.setAllowCredentials(true);
 	    config.addAllowedOrigin("*");
 	    config.addAllowedHeader("*");
 	    config.addAllowedMethod("*");
